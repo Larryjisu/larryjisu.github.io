@@ -1,0 +1,9 @@
+[submodule "hugo-theme-pixyll"]
+	path = hugo-theme-pixyll
+	url = https://github.com/azmelanar/hugo-theme-pixyll.git
+[submodule "themes/pixyll"]
+	path = themes/pixyll
+	url = https://github.com/azmelanar/hugo-theme-pixyll.git
+[submodule "themes/paper"]
+	path = themes/paper
+	url = https://github.com/adityatelange/hugo-PaperMod.git

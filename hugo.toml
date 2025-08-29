@@ -1,91 +1,146 @@
-baseURL = "http://example.org/"
-DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
-languageCode = "en-us"
-title = "A Hugo Site"
-copyright = "This is a customized copyright."
-theme = "diary"
+baseUrl = "https://larryjisu.github.io/"
+title = "letsgo"
+theme = "PaperMod"
 
-# Generate sitemap in the public folder
-[sitemap]
-  changefreq = "always"
-  filename = "sitemap.xml"
-  priority = 0.5
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
 
-# Google Analytics
-[services]
-  [services.googleAnalytics]
-    id = "G-XXXXXXXXXX"  # Your Google Analytics ID
+[pagination]
+  pagerSize = 5
 
-[markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = true
-    style = "perldoc"
-    tabWidth = 4
+
+[minify]
+  disableXML = true
+  minifyOutput = true
 
 [params]
-subtitle = "Themed by Diary."
-enableGitalk = false
-enableGiscus = true
+  env = "production" # to enable google analytics, opengraph, twitter-cards and schema.
+  title = "ExampleSite"
+  description = "ExampleSite description"
+  keywords = ["Blog", "Portfolio", "PaperMod"]
+  author = "Me"
+  # author = ["Me", "You"] # multiple authors
+  images = ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat = "January 2, 2006"
+  defaultTheme = "auto" # dark, light
+  disableThemeToggle = false
 
-# Microsoft Clarity (https://clarity.microsoft.com/) is a free user behavior recording and analytics tool
-clarity = "abcdefghzd"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = false
+  tocopen = false
 
-# Twitter Card and Open Graph settings
-enableOpenGraph = true
-enableTwitterCards = true
-title = "My Blog" # will set 'og:site_name'
-description = "My HomePage Description"  # will set 'og:description'
+  [params.assets]
+    # disableHLJS = true # to disable highlight.js
+    # disableFingerprinting = true
+    favicon = "<link / abs url>"
+    favicon16x16 = "<link / abs url>"
+    favicon32x32 = "<link / abs url>"
+    apple_touch_icon = "<link / abs url>"
+    safari_pinned_tab = "<link / abs url>"
 
-[params.gitalk]
-  owner = "user"
-  repo = "repo name"
-  client_id = "your client id"
-  client_secret = "your client secret"
-[taxonomies]
-   tag = "tags"
-   category = "categories"
+  [params.label]
+    text = "Home"
+    icon = "/apple-touch-icon.png"
+    iconHeight = 35
 
-[params.utterances]
-repo="your repo"
-term="[ENTER TERM HERE]"
-label="your label"
-theme="github-light"
+  # profile-mode
+  [params.profileMode]
+    enabled = false # needs to be explicitly set
+    title = "Jisu Bang"
+    subtitle = "This is subtitle"
+    imageUrl = "<img location>"
+    imageWidth = 120
+    imageHeight = 120
+    imageTitle = "my image"
+    
+    [[params.profileMode.buttons]]
+      name = "Posts"
+      url = "posts"
+    [[params.profileMode.buttons]]
+      name = "Tags"
+      url = "tags"
 
-# Please visit https://giscus.app/ to generate settings.
-[params.giscus]
-    data_repo="username/repo"
-    data_repo_id="**************************"    
-    data_category="General"
-    data_category_id="*********************"
-    data_mapping="pathname"
-    data_strict="0"
-    data_reactions_enabled="1"
-    data_emit_metadata="0"
-    data_input_position="bottom"
-    data_theme="preferred_color_scheme"
-    data_lang="en"
-    crossorigin="anonymous"
+  # home-info mode
+  [params.homeInfoParams]
+    Title = "Jisu Bang"
+    #Content = ""
 
+  [[params.socialIcons]]
+    name = "instagram"
+    url = "https://www.instagram.com/jisu_bang_?igsh=bGhzNGVveXFhN2tm&utm_source=qr"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/jisu-bang-383a14283/"
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/Larryjisu"
+
+  [params.analytics.google]
+    SiteVerificationTag = "XYZabc"
+  [params.analytics.bing]
+    SiteVerificationTag = "XYZabc"
+  [params.analytics.yandex]
+    SiteVerificationTag = "XYZabc"
+
+  [params.cover]
+    hidden = true # hide everywhere but not in structured data
+    hiddenInList = true # hide on list pages and home
+    hiddenInSingle = true # hide on single page
+
+  [params.editPost]
+    URL = "https://github.com/<path_to_repo>/content"
+    Text = "Suggest Changes" # edit text
+    appendFilePath = true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    limit = 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys = ["title", "permalink", "summary", "content"]
 
 [[menu.main]]
-url = "/categories"
-name = "Categories"
-weight = 2
+  identifier = "categories"
+  name = "categories"
+  url = "/categories/"
+  weight = 10
 [[menu.main]]
-url = "/tags"
-name = "Tags"
-weight = 3
+  identifier = "tags"
+  name = "tags"
+  url = "/tags/"
+  weight = 20
 [[menu.main]]
-url = "/posts"
-name = "Archive"
-weight = 1
-[[menu.main]]
-url = "/index.xml"
-name = "RSS Feed"
-weight = 4
+  identifier = "example"
+  name = "example.org"
+  url = "https://example.org"
+  weight = 30
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses = true
+
+[markup.highlight]
+  noClasses = false
+  # anchorLineNos = true
+  # codeFences = true
+  # guessSyntax = true
+  # lineNos = true
+  # style = "monokai"
