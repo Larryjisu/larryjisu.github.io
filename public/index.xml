@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>letsgo</title>
-    <link>https://larryjisu.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on letsgo</description>
     <image>
       <title>letsgo</title>
-      <url>https://larryjisu.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://larryjisu.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <lastBuildDate>Thu, 28 Aug 2025 15:18:00 +0900</lastBuildDate>
-    <atom:link href="https://larryjisu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>test입니다</title>
-      <link>https://larryjisu.github.io/posts/test/</link>
+      <title>Risk Neutral Density in the Black-Scholes Model: Introduction</title>
+      <link>http://localhost:1313/posts/test/</link>
       <pubDate>Thu, 28 Aug 2025 15:18:00 +0900</pubDate>
-      <guid>https://larryjisu.github.io/posts/test/</guid>
-      <description>이 글은 PaperMod 테마를 사용한 첫 포스트 작성법에 대한 요약입니다.</description>
+      <guid>http://localhost:1313/posts/test/</guid>
+      <description>이 글은 Black Scholes Nodel에서의 Risk Neutral Density에 관한 글입니다.</description>
     </item>
   </channel>
 </rss>
