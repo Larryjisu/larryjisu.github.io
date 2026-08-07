@@ -1,0 +1,18 @@
+.post-content .mermaid {
+  margin: 2rem 0;
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--entry);
+  text-align: center;
+}
+
+.post-content .mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.post-content blockquote:first-of-type {
+  border-inline-start-color: var(--primary);
+}
