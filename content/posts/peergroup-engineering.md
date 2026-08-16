@@ -10,6 +10,18 @@ showtoc: false
 tocopen: false
 ---
 
+## Project Summary
+
+> **Problem** — VC 심사역의 피어기업 탐색·재무정보 조회·멀티플 계산 업무가 수작업으로 분절되어 있음
+>
+> **Solution** — 국내 전체 상장사를 대상으로 Hybrid Search + LLM 검증 Agent 기반 Peer Valuation Service 구축
+>
+> **My Work** — 데이터 파이프라인, 피어 검색, Agent 검증, 재무정보 연동 및 서비스 배포
+>
+> **Result** — Recall@50 0.543 → 0.596, 초기 피어 검토 반나절 → 약 2~3시간
+>
+> **Stack** — Python · FastAPI · PostgreSQL/Supabase · DuckDB · Ko-SRoBERTa · BM25/RRF · LLM Agent
+
 ## 배경
 
 VC는 투자 이후 예상수익률을 계산하기위해서 Exit 가치를 추정한다. 그러나 비상장기업은 시장에서 가격이 형성되지 않았기 때문에 그 가치를 직접 관찰하기 어렵다. 이에 대안책으로 사업모델이 유사하면 유사한 가치평가를 받을 것이라는 가정하에 유사 사업군에 속한 상장기업의 멀티플을 참고하여 비상장기업의 가치를 추정한다. 따라서 적절한 비교기업이자 피어를 선정하는 일은 비상장기업 가치평가의 알파이자 오메가라고 할 수 있다.
